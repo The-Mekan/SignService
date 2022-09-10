@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "89924b5a-9781-4317-bf52-6abb0548cffd",
+		"name": "Mekan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17948868"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Post Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"samettttt\",\r\n    \"lastName\": \"ozdemirrrrrr\",\r\n    \"email\":\"sam.kemal@hotmail.com\",\r\n    \"password\":\"1234567\",\r\n    \"passwordConfirmation\": \"1234567\",\r\n    \"role\": \"{{consumer}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/v1/api/users",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"v1",
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"sam.kemal@hotmail.com\",\r\n    \"password\":\"1234567\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/v1/api/sessions",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"v1",
+								"api",
+								"sessions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
